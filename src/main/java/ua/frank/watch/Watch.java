@@ -60,12 +60,8 @@ public class Watch {
 		test.time = scanner.nextLine();
 		try {
 			test.timeFormat = test.readPropertyFile("config.properties", "time");
-		} catch (IOException e1) {
-			e1.printStackTrace();
-		}
-		try {
 			test.convertTime();
-		} catch (ParseException e) {
+		} catch (IOException | ParseException e) {
 			e.printStackTrace();
 		}
 		scanner.close();
