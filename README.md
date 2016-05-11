@@ -1,2 +1,2 @@
 # Watch
-Project calculates angle between hour, minute, second arrows
+Project calculates angle between hour, minute, second hand
