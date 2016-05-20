@@ -37,15 +37,15 @@ public class Watch {
 	 * */
 	private double second;
 	/**
-	 * hourAngle calculated angle of hour arrow.
+	 * hourAngle calculated angle of hour hand.
 	 * */
 	private double hourAngle;
 	/**
-	 * minuteAngle calculated angle of minute arrow.
+	 * minuteAngle calculated angle of minute hand.
 	 * */
 	private double minuteAngle;
 	/**
-	 * secondAngle calculated angle of second arrow.
+	 * secondAngle calculated angle of second hand.
 	 * */
 	private double secondAngle;
 	
@@ -103,24 +103,24 @@ public class Watch {
 	}
 
 	/**
-	 * based on given time, this method is calculating arrow angles and adds them to array.
+	 * based on given time, this method is calculating hand angles and adds them to array.
 	 * @return angleTime calculated angles of arrows
 	 * */
 	public void initializeAngle() {
 		/**
-		 * one step angle of hour arrow.
+		 * one step angle of hour hand.
 		 * */
 		final double HOUR_ANGLE = 30; //made this variables local cause class doesn't use them outside initializeAngle() method
 		/**
-		 * one step angle of second and minute arrow.
+		 * one step angle of second and minute hand.
 		 * */
 		final double SEC_MIN_ANGLE = 6;
 		/**
-		 * one step second arrow is + 0.1 to minute arrow, correction to minute angle.
+		 * one step second hand is + 0.1 to minute hand, correction to minute angle.
 		 * */
 		final double CORRECTION_MINUTE = 0.1;
 		/**
-		 * one step minute arrow is + 0.5 to hour arrow, correction to hour angle.
+		 * one step minute hand is + 0.5 to hour hand, correction to hour angle.
 		 * */
 		final double CORRECTION_HOUR = 0.5;
 		
@@ -130,30 +130,30 @@ public class Watch {
 	}
 
 	/**
-	 * calculates angle between arrows - second and hour.
-	 * @param secondAngle angle of second arrow
-	 * @param hourAngle angle of hour arrow
-	 * @return angle between second and hour arrows
+	 * calculates angle between hands - second and hour.
+	 * @param secondAngle angle of second hand
+	 * @param hourAngle angle of hour hand
+	 * @return angle between second and hour hands
 	 * */
 	public double getAngleBetweenHourAndSecond(double secondAngle, double hourAngle) {
 		return Math.abs(secondAngle - hourAngle);
 	}
 	
 	/**
-	 * calculate and outputs angle between arrows - minute and hour.
-	 * @param hourAngle angle of hour arrow
-	 * @param minuteAngle angle of minute arrow
-	 * @return angle between minute and hour arrows
+	 * calculate and outputs angle between hands - minute and hour.
+	 * @param hourAngle angle of hour hand
+	 * @param minuteAngle angle of minute hand
+	 * @return angle between minute and hour hands
 	 * */
 	public double getAngleBetweenMinuteAndHour(double hourAngle, double minuteAngle) {
 		return Math.abs(hourAngle - minuteAngle);
 	}
 
 	/**
-	 * calculate and outputs angle between arrows - minute and second.
-	 * @param minuteAngle angle of minute arrow
-	 * @param secondAngle angle of second arrow
-	 * @return angle between minutes and seconds arrows
+	 * calculate and outputs angle between hands - minute and second.
+	 * @param minuteAngle angle of minute hand
+	 * @param secondAngle angle of second hand
+	 * @return angle between minutes and seconds hands
 	 * */
 	public double getAngleBetweenMinuteAndSecond(double minuteAngle, double secondAngle) {
 		return Math.abs(minuteAngle - secondAngle);
